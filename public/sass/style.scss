@@ -1,0 +1,164 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 2017-7-18, 18:16:49
+    Author     : buff
+*/
+@import "c:/apache24/htdocs/k_note/lib/sass/_common.scss";
+@import "c:/apache24/htdocs/k_note/lib/sass/_functions";
+@include base();
+@media (min-width:768px){
+    .container{
+        width: 1150px;
+        padding: 0;
+    }
+}
+h1{
+    margin-top: 20px;
+
+}
+.user_list{
+    padding: 10px 15px;
+    width: 225px;
+    border:1px solid #ccc;
+    height:500px;
+    h2{
+        margin-top: 0;
+    }
+    ul{
+        max-height: 400px;
+        overflow-y: auto;
+        li{
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+        }
+    }
+}
+.gui{
+    width: 900px;
+    margin-left: 25px;
+    height: 500px;
+    .gui_content{
+        overflow-y:auto;
+        padding: 10px;
+        width: 650px;
+        height: 100%;
+        border:1px solid #ccc;
+    }
+    .gui_user{
+        padding: 10px;
+        border:1px solid #ccc;
+        width: 225px;
+        margin-left: 25px;
+        height: 100%;
+    }
+}
+.mes_item{
+    padding-bottom: 10px;
+    font-size: 20px;
+    .user_name{
+        color: blue;
+    }
+    time{
+        @include opacity(0.5);
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .message{
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin-left: 40px;
+        max-width:560px;
+        &.self{
+            background-color: #bfd7ef;
+        }
+        &.other{
+            background-color: #ccc;
+        }
+    }
+
+}
+.public_yzm{
+    width: 100px;
+    img{
+        position: absolute;
+        top: 25px;
+        left: 100px;
+    }
+}
+#user_input{
+    padding: 5px 10px;
+    margin-top: 10px;
+    width: 100%;
+    resize:none;
+
+}
+.gui_input{
+    width:650px;
+    position:relative;
+    button{
+        position: absolute;
+        right:5px;
+        bottom:10px;
+        padding: 2px 10px;
+    }
+}
+#isClose{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    display: none;
+    left:0;
+    right: 0;
+    z-index:67;
+    .cont{
+        background-color: #fff;
+        width: 320px;
+        height: 200px;
+        position: absolute;   
+        left: 50%;
+        top:40%;
+        @include transform( translate(-50%,-50%));
+        p{
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            color:red;
+            vertical-align: middle;
+        }
+    }
+}
+#sixindiv,#reqsixindiv{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    z-index:66;
+    background-color:whitesmoke;
+    border:1px solid whitesmoke;
+    textarea{
+        width: 400px;height: 150px;resize:none;margin-top: 5px;
+    }
+    p{
+        font-size: 20px;
+    }
+    button{
+        position: absolute;
+        right:15px;
+        bottom:20px;
+        padding: 2px 10px;
+    }
+    .close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 25px;
+    }
+}
