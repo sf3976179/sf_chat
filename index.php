@@ -1,11 +1,9 @@
 <?php
 /*
-  <#日期 = "2017-7-19">
-  <#时间 = "00:19:19">
-  <#人物 = "buff" >
+  <#日期 = "2017-8-10">
+  <#人物 = "sf" >
   <#备注 = " ">
  */
-require_once "./config.php";
 session_start();
 $_SESSION['user_name'] = '';
 if ($_SESSION['user_name'] != '') {
@@ -27,7 +25,7 @@ else {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./public/css/bootstrap.min.css">
         <link rel="stylesheet" href="./public/css/style.css">
-        <title>buffge聊天室</title>
+        <title>聊天室</title>
         <script>var localGroup = "public";
 <?php
 if ($islogin) {
@@ -61,13 +59,10 @@ else {
             <nav style="margin-top: 30px;" class="navbar navbar-default" role="navigation"><!--这里的role是为了增加语意-->
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="javascript:;">buffge聊天室</a>
+                        <a class="navbar-brand" href="javascript:;">聊天室</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/buffchat/index.php">公共聊天室</a></li>
-                        <li class=""><a href="/buffchat/groupWen.php">文人雅士专区</a></li>
-                        <li class=""><a href="/buffchat/groupFei.php">死肥宅专区</a></li>
-                        <li class=""><a href="/buffchat/groupJiqi.php">机器人问答专区</a></li>
+                        <li class="active"><a href="/talking/buffchat-master/index.php">公共聊天室</a></li>
                     </ul>
                 </div>
             </nav>

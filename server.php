@@ -18,7 +18,7 @@
  * 
  * ">
  */
-require_once '/usr/local/nginx/html/talking/buffchat-master/class/WebS.php';
+require_once '/usr/local/nginx/html/talking/sf_chat/class/WebS.php';
 if (php_sapi_name() !== 'cli') {
     exit("使用cli模式");
 }
