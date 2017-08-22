@@ -168,7 +168,7 @@ var wsServer = 'ws://127.0.0.1:9501?group=' + localGroup;
 var websocket = new WebSocket(wsServer);
 websocket.onopen = function (evt) {
     console.log("已连接上websocket服务器.");
-    alert(isLogin);
+    //alert(isLogin);
     if (isLogin) {
 	console.log("初始发送数据：");
 	console.log(localToken);
