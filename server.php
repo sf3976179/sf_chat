@@ -54,17 +54,7 @@ $serv->on('Close', function($serv, $fd) {
     global $redis;
     $serv->closing($redis, $fd);
 });
-//当有新的任务时触发事件
-$serv->on('Task', function($serv, $task_id, $src_worker_id, $data) {
-    global $redis;
-    $question = urlencode($data[1]);
-    $res = file_get_contents("http://192.168.1.109:81/ques.php?question={$question}");
-    $res2 = json_decode($res);
-    $res2->result->content;
-    $serv->sendToGroup($data[0], $redis, "智能机器人", $serv::QUESTION, "@{$data[2]} " . $res2->result->content, $data[3]);
-    $result = $data[2] . " 问问题 " . urldecode($question) . "\n答案是:" . $res2->result->content . "\n";
-    return $result;
-});
+
 //当任务结束时触发事件
 $serv->on('Finish', function($serv, $task_id, $data) {
     echo $data;
