@@ -62,7 +62,7 @@ else {
                         <a class="navbar-brand" href="javascript:;">聊天室</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/talking/buffchat-master/index.php">公共聊天室</a></li>
+                        <li class="active"><a href="/talking/sf_chat/index.php">公共聊天室</a></li>
                     </ul>
                 </div>
             </nav>
