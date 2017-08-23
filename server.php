@@ -51,6 +51,12 @@ $serv->on('Close', function($serv, $fd) {
     $serv->closing($redis, $fd);
 });
 
+//当有新的任务时触发事件
+//1.73以后finish已经废弃，采用直接在onTask回调函数中return字符串的方式
+$serv->on('Task', function($serv, $task_id, $src_worker_id, $data) {
+    return $data;
+});
+
 //当任务结束时触发事件
 $serv->on('Finish', function($serv, $task_id, $data) {
     echo $data;
